@@ -25,6 +25,7 @@ import getAllProductCategories from '../../services/getAllProductCategories'
       allProducts = (allProducts.length > 0 ? allProducts : [])
       originalProducts.current = allProducts;
       setProducts(allProducts);
+      console.log(allProducts)
     }
 
     function fetchCategories() {
