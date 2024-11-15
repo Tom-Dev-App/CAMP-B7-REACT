@@ -5,6 +5,9 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail"
 import HookForm from "./pages/HookForm/HookForm"
 import ReactForm from "./pages/ReactForm/ReactForm"
 import FetchDataWithAxios from "./pages/FetchDataWithAxios/FetchDataWithAxios"
+import CounterWithoutToolkit from "./pages/CounterWithoutToolkit/CounterWithoutToolkit"
+import CounterWithToolkit from "./pages/CounterWithToolkit/CounterWithToolkit"
+import UsersWithAsyncThunk from "./pages/UsersAsyncThunk/UsersAsyncThunk"
 
  function App() {
 
@@ -18,6 +21,9 @@ import FetchDataWithAxios from "./pages/FetchDataWithAxios/FetchDataWithAxios"
           <Route path="/reactform" element={<ReactForm />}/>
           <Route path="/axios" element={<FetchDataWithAxios />}/>
           <Route path="*" element={<h4>Not Found Page</h4>}></Route>
+          <Route path="/counter" element={<CounterWithoutToolkit />}></Route>
+          <Route path="/countertoolkit" element={<CounterWithToolkit />}></Route>
+          <Route path="/userasyncthunk" element={<UsersWithAsyncThunk />}></Route>
         </Routes>
      </UserProvider>
     </>
