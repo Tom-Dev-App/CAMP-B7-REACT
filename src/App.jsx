@@ -1,21 +1,22 @@
-import { Route, Routes } from "react-router-dom"
-import { UserProvider } from "./context/UserContext"
-import Products from "./pages/Products/Products"
-import ProductDetail from "./pages/ProductDetail/ProductDetail"
+import { Route, Routes } from "react-router-dom";
+import { UserProvider } from "./context/UserContext";
+import Products from "./pages/Products/Products";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import UploadProduct from "./pages/UploadProduct/UploadProduct";
 
- function App() {
-
+function App() {
   return (
     <>
-     <UserProvider>
+      <UserProvider>
         <Routes>
-          <Route path="/"  element={<Products />}/>
-          <Route path="/products/:slug" element={<ProductDetail />}/>
+          <Route path="/" element={<Products />} />
+          <Route path="/products/:slug" element={<ProductDetail />} />
+          <Route path="/products/new" element={<UploadProduct />} />
           <Route path="*" element={<h4>Not Found Page</h4>}></Route>
         </Routes>
-     </UserProvider>
+      </UserProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

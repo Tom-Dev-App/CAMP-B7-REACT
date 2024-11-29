@@ -1,6 +1,6 @@
-import { useId } from 'react';
-import { useUser } from '../../context/UserContext';
-import { Link } from 'react-router-dom';
+import { useId } from "react";
+import { useUser } from "../../context/UserContext";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ onSearchChange }) {
   const inputId = useId();
@@ -14,7 +14,10 @@ export default function Navbar({ onSearchChange }) {
     <nav className="grid grid-cols-3 justify-between px-24 py-4 bg-[#8091FF] items-center">
       <ul>
         <li className="flex items-center justify-center">
-          <Link to="/" className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]">
+          <Link
+            to="/"
+            className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]"
+          >
             Home
           </Link>
         </li>
@@ -37,7 +40,10 @@ export default function Navbar({ onSearchChange }) {
             <button onClick={login}>Sign in</button>
           </li>
           <li>
-            <Link className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]" to="/signup">
+            <Link
+              className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]"
+              to="/signup"
+            >
               Sign up
             </Link>
           </li>
@@ -45,17 +51,34 @@ export default function Navbar({ onSearchChange }) {
       ) : (
         <ul className="flex justify-end gap-2">
           <li>
-            <Link className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]" to="/cart">
+            <Link
+              className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]"
+              to="/products/new"
+            >
+              New Product
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]"
+              to="/cart"
+            >
               Cart
             </Link>
           </li>
           <li>
-            <Link to="/orders" className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]">
+            <Link
+              to="/orders"
+              className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]"
+            >
               My Orders
             </Link>
           </li>
           <li>
-            <button onClick={logout} className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]">
+            <button
+              onClick={logout}
+              className="text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]"
+            >
               Sign out
             </button>
           </li>

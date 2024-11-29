@@ -1,13 +1,13 @@
-export default function getAllProductCategories(){
-  return  [   {
-      id: 'FMEN',
-      slug: 'men-shoes',
-      name: `Men's Shoes`
-    },
-    {
-      id: 'FWMEN',
-      slug: 'women-shoes',
-      name: `Women's Shoes`
-    },
-  ]
+import axios from "axios";
+
+async function getAllProductCategories() {
+  try {
+    const response = await axios.get("http://localhost:5000/api/v2/categories");
+    return response.data.data;
+  } catch (error) {
+    console.error("Error fetching product categories:", error);
+    return [];
+  }
 }
+
+export default getAllProductCategories;
