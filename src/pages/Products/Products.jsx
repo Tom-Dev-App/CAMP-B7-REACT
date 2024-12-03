@@ -42,7 +42,7 @@ function Products() {
 
     fetchCategories();
     fetchProducts();
-    console.log(originalProducts);
+    // console.log(originalProducts);
   }, []);
 
   useEffect(() => {
